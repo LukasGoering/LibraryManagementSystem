@@ -1,5 +1,5 @@
 # LibraryManagementSystem
-A console application in C# that simulates a library management system.
+A console application in C# using the .NET framework simulating a library management system.
 
 Features:
  - Add books to library
