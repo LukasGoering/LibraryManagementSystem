@@ -12,3 +12,4 @@ C:\Users\Privat\VisualStudioCode\LibraryManagementSystem\obj\Debug\net9.0\refint
 C:\Users\Privat\VisualStudioCode\LibraryManagementSystem\obj\Debug\net9.0\LibraryManagementSystem.pdb
 C:\Users\Privat\VisualStudioCode\LibraryManagementSystem\obj\Debug\net9.0\LibraryManagementSystem.genruntimeconfig.cache
 C:\Users\Privat\VisualStudioCode\LibraryManagementSystem\obj\Debug\net9.0\ref\LibraryManagementSystem.dll
+C:\Users\Privat\VisualStudioCode\LibraryManagementSystem\obj\Debug\net9.0\LibraryManagementSystem.sourcelink.json

@@ -249,18 +249,8 @@ public class Program
             // Get user input
             string userOption = Library.GetValidInput("");
 
-            // Execute the corresponding action
-            // Use try-and-catch block to handle errors if the execution fails
-            try
-            {
-                ExecuteOption(userOption, library);   
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
-                Console.WriteLine("Please try restart the program. Program exits now.");
-                Environment.Exit(0); // Exit program immediately
-            }         
+            // Execute the corresponding action            
+            ExecuteOption(userOption, library);
         }
     }
 
@@ -279,45 +269,55 @@ public class Program
     
     private static void ExecuteOption(string userOption, Library library)
     {
-        switch (userOption)
-        {
-            case "1": // Add a book to the library
-                library.AddBooks();
-                break;
+        // Use try-and-catch block to handle errors if the execution fails
+        try
+            {
+            switch (userOption)
+            {
+                case "1": // Add a book to the library
+                    library.AddBooks();
+                    break;
 
-            case "2": // Remove a book from the library
-                library.RemoveBooks();
-                break;
+                case "2": // Remove a book from the library
+                    library.RemoveBooks();
+                    break;
 
-            case "3": // Display all books in the library
-                library.DisplayBooks();
-                break;
+                case "3": // Display all books in the library
+                    library.DisplayBooks();
+                    break;
 
-            case "4": // Search for a book in the library
-                library.SearchBook();
-                break;
+                case "4": // Search for a book in the library
+                    library.SearchBook();
+                    break;
 
-            case "5": // Borrow a book
-                library.BorrowBooks();
-                break;
+                case "5": // Borrow a book
+                    library.BorrowBooks();
+                    break;
 
-            case "6": // Return a book
-                library.ReturnBooks();
-                break;
-            
-            case "7": // Exit the program
-                Console.Write("Are you sure you want to exit? (y/n): ");
-                string confirm = Library.GetValidInput("");
-                if (confirm.ToLower() == "y")
-                {
-                    Console.WriteLine("Exiting the program. Goodbye!");
-                    Environment.Exit(0); // Exit the program immediately
-                }
-                break;
+                case "6": // Return a book
+                    library.ReturnBooks();
+                    break;
+                
+                case "7": // Exit the program
+                    Console.Write("Are you sure you want to exit? (y/n): ");
+                    string confirm = Library.GetValidInput("");
+                    if (confirm.ToLower() == "y")
+                    {
+                        Console.WriteLine("Exiting the program. Goodbye!");
+                        Environment.Exit(0); // Exit the program immediately
+                    }
+                    break;
 
-            default: // Handle invalid input
-                Console.WriteLine("Invalid option. Please try again.");
-                break;
+                default: // Handle invalid input
+                    Console.WriteLine("Invalid option. Please try again.");
+                    break;
+            }
         }
+        catch(Exception ex)
+        {
+            Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+            Console.WriteLine("Please try restart the program. Program exits now.");
+            Environment.Exit(0); // Exit program immediately
+        }    
     }
 }
